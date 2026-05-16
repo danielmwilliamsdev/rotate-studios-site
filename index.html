@@ -15,8 +15,7 @@
 <body>
   <header class="site-header" data-header>
     <a class="brand" href="#top" aria-label="Rotate Studios home">
-      <img src="assets/rotate-mark-white.png" alt="">
-      <span>Rotate</span>
+      <img class="brand-lockup" src="assets/rotate-logo-header.png" alt="Rotate">
     </a>
     <nav class="nav" aria-label="Primary navigation">
       <a href="#watch">Watch</a>
@@ -69,11 +68,24 @@
 
     <section id="watch" class="watch section-dark">
       <div class="section-head">
-        <p class="micro">First cut / proof of direction</p>
-        <h2>Performance content that feels like a platform.</h2>
+        <p class="micro">Rotate demo / proof of direction</p>
+        <h2>The logo, the room, the broadcast energy.</h2>
       </div>
-      <div class="video-shell">
-        <video class="showreel-video" src="assets/rotate-teaser-90s.mp4" controls playsinline poster="assets/warehouse-front.jpeg"></video>
+      <div class="video-grid">
+        <article class="video-card video-card-main">
+          <div class="video-meta">
+            <span>Official demo</span>
+            <strong>Rotate Demo</strong>
+          </div>
+          <video class="showreel-video" src="assets/rotate-demo.mp4" controls autoplay muted loop playsinline></video>
+        </article>
+        <article class="video-card">
+          <div class="video-meta">
+            <span>Founding member cut</span>
+            <strong>90 second teaser</strong>
+          </div>
+          <video class="showreel-video" src="assets/rotate-teaser-90s.mp4" controls playsinline poster="assets/warehouse-front.jpeg"></video>
+        </article>
       </div>
     </section>
 

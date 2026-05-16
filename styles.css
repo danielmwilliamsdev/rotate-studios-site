@@ -129,16 +129,14 @@ h3 {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  min-width: 126px;
-  font-size: 29px;
-  font-weight: 850;
+  min-width: 190px;
 }
 
-.brand img {
-  width: 28px;
-  height: 28px;
+.brand-lockup {
+  width: 182px;
+  height: auto;
   object-fit: contain;
+  filter: drop-shadow(0 0 18px rgba(245, 243, 236, 0.16));
 }
 
 .nav {
@@ -364,10 +362,52 @@ h3 {
   max-width: 1220px;
 }
 
-.video-shell {
+.video-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.22fr) minmax(320px, 0.78fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.video-card {
+  position: relative;
   border: 1px solid var(--line);
   background: #000;
   box-shadow: var(--shadow);
+}
+
+.video-card-main {
+  border-color: rgba(232, 255, 68, 0.42);
+}
+
+.video-meta {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  display: grid;
+  gap: 3px;
+  padding: 10px 12px;
+  border: 1px solid rgba(245, 243, 236, 0.18);
+  background: rgba(8, 9, 8, 0.68);
+  backdrop-filter: blur(12px);
+}
+
+.video-meta span,
+.video-meta strong {
+  display: block;
+  text-transform: uppercase;
+}
+
+.video-meta span {
+  color: var(--acid);
+  font-size: 10px;
+  font-weight: 950;
+}
+
+.video-meta strong {
+  font-size: 13px;
+  line-height: 1;
 }
 
 .showreel-video {
@@ -725,7 +765,8 @@ textarea:focus {
   .studio-split,
   .membership-zone,
   .manifesto,
-  .reserve {
+  .reserve,
+  .video-grid {
     grid-template-columns: 1fr;
   }
 
@@ -740,7 +781,11 @@ textarea:focus {
   }
 
   .brand {
-    font-size: 24px;
+    min-width: 138px;
+  }
+
+  .brand-lockup {
+    width: 138px;
   }
 
   .header-cta {
