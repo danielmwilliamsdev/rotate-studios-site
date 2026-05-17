@@ -136,7 +136,7 @@ function renderConcept() {
         <div class="mixmag-heading">
           <div class="mixmag-lockup">
             <div class="mixmag-logo-frame">
-              <img src="assets/mixmag-logo.png?v=20260517s" alt="Mixmag">
+              <img src="assets/mixmag-logo.png?v=20260517t" alt="Mixmag">
             </div>
             <span>Quarterly mix feature</span>
           </div>
