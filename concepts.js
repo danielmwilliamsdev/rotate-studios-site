@@ -55,16 +55,16 @@ const concepts = {
     body: "concept-04",
     media: "assets/lighting-concept.png",
     mediaType: "image",
-    eyebrow: "Underground broadcast culture",
-    title: "Manchester sets that look like they matter.",
-    text: "A heavier club-culture route: red light, warehouse pressure, broadcast status, and a more underground founding-member tone.",
+    eyebrow: "Manchester direct-to-social studio",
+    title: "Manchester sets. Captured in 4K. Posted by morning.",
+    text: "Rotate is built as the world's first direct-to-social DJ studio: 4K video, broadcast audio capture, zip-line cameras, AI-assisted edits, full production suites, lessons, and a flagship Mixmag pathway.",
     cta: "Join founding list",
     secondary: "Watch demo",
-    sectionTitle: "Raw room. Polished output.",
+    sectionTitle: "One room for performance, production and release.",
     modules: [
-      ["Room", "Dark, precise, camera-ready", "A controlled club environment built for proper DJ credibility."],
-      ["Signal", "Broadcast-grade capture", "Multi-angle recording with clean audio and a strong visual identity."],
-      ["Scene", "Community hub", "Founders, labels, promoters, and collaborators in one Manchester network."]
+      ["4K", "4K video + audio capture", "Every session is captured in 4K with clean DJ audio, proper monitoring and camera-safe lighting."],
+      ["Zip", "Zip-line camera movement", "Moving overhead shots and booth angles give the set the motion of a proper broadcast, not a static phone clip."],
+      ["AI", "Direct-to-social edits", "The system turns one performance into a full set, vertical clips and platform-ready assets for TikTok, Instagram and YouTube."]
     ]
   },
   "05": {
@@ -87,10 +87,19 @@ const concepts = {
 };
 
 const stats = [
-  ["40", "founding members"],
+  ["1.4M+", "Mixmag SoundCloud audience"],
   ["4K", "multi-camera capture"],
   ["24h", "target delivery"],
-  ["5+", "camera-angle workflow"]
+  ["Zip", "camera movement"]
+];
+
+const manchesterCapabilities = [
+  ["4K video", "Multi-camera capture for full sets, promo clips and high-quality archive footage."],
+  ["Audio capture", "Clean DJ audio recorded properly at source so the set sounds as good as it looks."],
+  ["Zip-line cameras", "Dynamic movement over the booth and crowd-facing angles for broadcast energy."],
+  ["AI clipping", "Key moments detected and cut into vertical edits for Instagram, TikTok and YouTube."],
+  ["Production suites", "Full production rooms for writing, finishing records, label work and creator sessions."],
+  ["Lessons", "DJ, production and content lessons for members who want to sharpen the craft, not just rent a room."]
 ];
 
 function mediaMarkup(concept, cls = "hero-media") {
@@ -107,13 +116,51 @@ function renderConcept() {
 
   document.body.classList.add(concept.body);
   document.title = `Rotate Studios / ${concept.name}`;
+  const nav = id === "04"
+    ? `<a href="#capture">Capture</a><a href="#mixmag">Mixmag</a><a href="#sankeys">Sankeys</a><a href="#reserve">Apply</a>`
+    : `<a href="#system">System</a><a href="#proof">Proof</a><a href="#reserve">Apply</a>`;
+  const manchesterSections = id === "04" ? `
+      <section id="capture" class="concept-section capability-section">
+        <p class="micro">World's first direct-to-social DJ studio</p>
+        <h2 class="section-title">Record once. Leave with the content system.</h2>
+        <div class="capability-grid">
+          ${manchesterCapabilities.map(([title, text]) => `
+            <article>
+              <h3>${title}</h3>
+              <p>${text}</p>
+            </article>
+          `).join("")}
+        </div>
+      </section>
+      <section id="mixmag" class="concept-section mixmag-section">
+        <div>
+          <p class="micro">Flagship partnership</p>
+          <h2 class="section-title">A quarterly Mixmag spotlight for Rotate DJs.</h2>
+        </div>
+        <div class="mixmag-card">
+          <span class="mixmag-number">1.4M+</span>
+          <p>Every quarter, Mixmag will feature one Rotate DJ, giving selected members a route into Mixmag's 1.4M+ SoundCloud audience and global electronic music network.</p>
+          <a class="pill light" href="https://m.soundcloud.com/mixmag-1" target="_blank" rel="noreferrer">View Mixmag SoundCloud</a>
+        </div>
+      </section>
+      <section id="sankeys" class="concept-section sankeys-section">
+        <div class="partner-strip">
+          <div>
+            <p class="micro">Manchester partner route</p>
+            <h2 class="section-title">Built to sit beside serious club culture.</h2>
+            <p>Sankeys brings the underground Manchester signal. Rotate turns that same credibility into repeatable studio content: captured, edited and ready to travel online.</p>
+          </div>
+          <div class="sankeys-lockup">
+            <img src="assets/sankeys-official-logo.svg" alt="Sankeys">
+          </div>
+        </div>
+      </section>
+  ` : "";
   document.querySelector("#app").innerHTML = `
     <header class="concept-header">
       <a href="designs.html" aria-label="Rotate design lab"><img class="concept-logo" src="assets/rotate-logo-header.png" alt="Rotate"></a>
       <nav class="concept-nav" aria-label="Concept navigation">
-        <a href="#system">System</a>
-        <a href="#proof">Proof</a>
-        <a href="#reserve">Apply</a>
+        ${nav}
       </nav>
       <a class="pill ${id === "01" || id === "05" ? "dark" : "light"}" href="#reserve">${concept.cta}</a>
     </header>
@@ -152,6 +199,7 @@ function renderConcept() {
           </div>
         </div>
       </section>
+      ${manchesterSections}
       <section id="proof" class="concept-section">
         <p class="micro">Founding proof</p>
         <h2 class="section-title">Built for DJs who need content that travels.</h2>
@@ -169,6 +217,15 @@ function renderConcept() {
       <a href="designs.html">Back to all five concepts</a>
     </footer>
   `;
+
+  if (window.location.hash) {
+    const scrollToHash = () => {
+      document.querySelector(window.location.hash)?.scrollIntoView({ block: "start" });
+    };
+    requestAnimationFrame(scrollToHash);
+    setTimeout(scrollToHash, 450);
+    window.addEventListener("load", scrollToHash, { once: true });
+  }
 }
 
 function renderLab() {
