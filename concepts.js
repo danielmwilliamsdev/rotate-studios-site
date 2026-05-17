@@ -136,7 +136,7 @@ function renderConcept() {
         <div class="mixmag-heading">
           <div class="mixmag-lockup">
             <div class="mixmag-logo-frame">
-              <img src="assets/mixmag-logo.png?v=20260517q" alt="Mixmag">
+              <img src="assets/mixmag-logo.png?v=20260517r" alt="Mixmag">
             </div>
             <span>Quarterly mix feature</span>
           </div>
@@ -164,7 +164,10 @@ function renderConcept() {
   ` : "";
   document.querySelector("#app").innerHTML = `
     <header class="concept-header">
-      <a href="designs.html" aria-label="Rotate design lab"><img class="concept-logo" src="assets/rotate-logo-header-safe.png?v=20260517q" alt="Rotate"></a>
+      <a class="concept-logo" href="designs.html" aria-label="Rotate design lab">
+        <span class="rotate-symbol" aria-hidden="true"></span>
+        <span class="rotate-wordmark">R&oslash;TATE</span>
+      </a>
       <nav class="concept-nav" aria-label="Concept navigation">
         ${nav}
       </nav>

@@ -75,9 +75,47 @@ textarea {
 }
 
 .concept-logo {
-  width: clamp(158px, 15vw, 236px);
-  max-width: 42vw;
+  width: fit-content;
+  max-width: 48vw;
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #f7f0e7;
+  line-height: 1;
   filter: drop-shadow(0 0 18px rgba(0,0,0,0.35));
+}
+
+.rotate-symbol {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  border: 4px solid currentColor;
+  border-radius: 50%;
+}
+
+.rotate-symbol::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -8px;
+  width: 5px;
+  height: 58px;
+  background: currentColor;
+  transform: translateX(-50%) rotate(34deg);
+  transform-origin: center;
+}
+
+.rotate-wordmark {
+  display: block;
+  color: currentColor;
+  font-family: "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(27px, 2.55vw, 38px);
+  font-weight: 950;
+  letter-spacing: 0;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .concept-nav {
@@ -551,7 +589,8 @@ textarea {
 }
 
 .concept-01 .concept-logo {
-  filter: invert(1);
+  color: #050505;
+  filter: none;
 }
 
 .concept-01 .pill.light,
@@ -721,7 +760,8 @@ textarea {
 }
 
 .concept-05 .concept-logo {
-  filter: invert(1);
+  color: #080808;
+  filter: none;
 }
 
 .concept-05 .concept-hero {
@@ -883,7 +923,25 @@ textarea {
   }
 
   .concept-logo {
-    width: 154px;
+    max-width: 46vw;
+    min-height: 44px;
+    gap: 8px;
+  }
+
+  .rotate-symbol {
+    width: 34px;
+    height: 34px;
+    border-width: 3px;
+  }
+
+  .rotate-symbol::after {
+    top: -7px;
+    width: 4px;
+    height: 48px;
+  }
+
+  .rotate-wordmark {
+    font-size: 24px;
   }
 
   .pill {
