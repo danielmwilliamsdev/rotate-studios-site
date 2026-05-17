@@ -75,7 +75,8 @@ textarea {
 }
 
 .concept-logo {
-  width: clamp(142px, 14vw, 212px);
+  width: clamp(158px, 15vw, 236px);
+  max-width: 42vw;
   filter: drop-shadow(0 0 18px rgba(0,0,0,0.35));
 }
 
@@ -384,29 +385,44 @@ textarea {
 }
 
 .mixmag-lockup {
-  width: fit-content;
+  width: min(100%, 560px);
   max-width: 100%;
-  display: flex;
-  align-items: center;
+  display: grid;
   gap: 14px;
-  padding: 14px 16px;
+  padding: clamp(16px, 2.4vw, 24px);
   border: 1px solid rgba(9,9,9,0.18);
-  background: rgba(255,255,255,0.56);
+  background:
+    linear-gradient(135deg, rgba(216,38,32,0.16), transparent 44%),
+    #090909;
+  box-shadow: 0 24px 80px rgba(9, 9, 9, 0.16);
 }
 
-.mixmag-lockup img {
-  width: min(210px, 46vw);
+.mixmag-logo-frame {
+  min-height: clamp(92px, 11vw, 132px);
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(245,240,230,0.16);
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.08), transparent),
+    rgba(245,240,230,0.035);
+}
+
+.mixmag-logo-frame img {
+  width: min(270px, 68vw);
   height: auto;
   display: block;
+  filter: invert(1);
 }
 
 .mixmag-lockup span {
   display: inline-flex;
   align-items: center;
+  width: fit-content;
   min-height: 28px;
   padding: 0 10px;
-  border: 1px solid rgba(216,38,32,0.35);
-  color: #d82620;
+  border: 1px solid rgba(216,38,32,0.55);
+  background: #d82620;
+  color: #f5f0e6;
   text-transform: uppercase;
   font-size: 11px;
   font-weight: 900;
@@ -863,10 +879,11 @@ textarea {
 @media (max-width: 620px) {
   .concept-header {
     padding: 16px;
+    gap: 14px;
   }
 
   .concept-logo {
-    width: 138px;
+    width: 154px;
   }
 
   .pill {
@@ -889,12 +906,10 @@ textarea {
 
   .mixmag-lockup {
     width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
   }
 
-  .mixmag-lockup img {
-    width: min(190px, 100%);
+  .mixmag-logo-frame img {
+    width: min(224px, 88%);
   }
 
   .mixmag-lockup span {
