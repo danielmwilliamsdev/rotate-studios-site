@@ -135,7 +135,7 @@ function renderConcept() {
       <section id="mixmag" class="concept-section mixmag-section">
         <div class="mixmag-heading">
           <div class="mixmag-lockup">
-            <img src="assets/mixmag-logo.png" alt="Mixmag">
+            <img src="assets/mixmag-logo.png?v=20260517m" alt="Mixmag">
             <span>Quarterly mix feature</span>
           </div>
           <p class="micro">Flagship partnership</p>
