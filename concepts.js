@@ -55,9 +55,9 @@ const concepts = {
     body: "concept-04",
     media: "assets/lighting-concept.png",
     mediaType: "image",
-    eyebrow: "Manchester direct-to-social studio",
-    title: "Manchester sets. Captured in 4K. Posted by morning.",
-    text: "Rotate is built as the world's first direct-to-social DJ studio: 4K video, broadcast audio capture, zip-line cameras, AI-assisted edits, full production suites, lessons, and a flagship Mixmag pathway.",
+    eyebrow: "Manchester DJ content studio",
+    title: "Mix. Record. Share.",
+    text: "Perform once and leave with 4K video, clean audio, zip-line camera movement and AI-assisted clips ready for TikTok, Instagram and YouTube.",
     cta: "Join founding list",
     secondary: "Watch demo",
     sectionTitle: "One room for performance, production and release.",
@@ -136,7 +136,7 @@ function renderConcept() {
         <div class="mixmag-heading">
           <div class="mixmag-lockup">
             <div class="mixmag-logo-frame">
-              <img src="assets/mixmag-logo.png?v=20260517p" alt="Mixmag">
+              <img src="assets/mixmag-logo.png?v=20260517q" alt="Mixmag">
             </div>
             <span>Quarterly mix feature</span>
           </div>
@@ -164,7 +164,7 @@ function renderConcept() {
   ` : "";
   document.querySelector("#app").innerHTML = `
     <header class="concept-header">
-      <a href="designs.html" aria-label="Rotate design lab"><img class="concept-logo" src="assets/rotate-logo-header-safe.png?v=20260517p" alt="Rotate"></a>
+      <a href="designs.html" aria-label="Rotate design lab"><img class="concept-logo" src="assets/rotate-logo-header-safe.png?v=20260517q" alt="Rotate"></a>
       <nav class="concept-nav" aria-label="Concept navigation">
         ${nav}
       </nav>
