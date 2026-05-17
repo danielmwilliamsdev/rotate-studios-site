@@ -53,7 +53,7 @@ const concepts = {
   "04": {
     name: "Red Warehouse",
     body: "concept-04",
-    media: "assets/lighting-concept.png",
+    media: "assets/snug-vinyl-rotate-studio.jpg",
     mediaType: "image",
     eyebrow: "Manchester DJ content studio",
     title: "Mix. Record. Share.",
@@ -136,7 +136,7 @@ function renderConcept() {
         <div class="mixmag-heading">
           <div class="mixmag-lockup">
             <div class="mixmag-logo-frame">
-              <img src="assets/mixmag-logo.png?v=20260517r" alt="Mixmag">
+              <img src="assets/mixmag-logo.png?v=20260517s" alt="Mixmag">
             </div>
             <span>Quarterly mix feature</span>
           </div>
