@@ -1,0 +1,13 @@
+{
+  "created": "2026-05-21T01:59:34.252Z",
+  "source": "Procedural Three.js asset based on Rotate Studios logo lockup",
+  "files": {
+    "wordmark": "rotate-logo-wordmark-3d.glb",
+    "mark": "rotate-logo-mark-3d.glb"
+  },
+  "notes": [
+    "Fully extruded warm white enamel material with darker side depth and red edge-light accent on the icon mark.",
+    "Built as reusable GLB assets for React Three Fiber, Three.js, Framer embeds, and WebGL previews.",
+    "Floating logo geometry only; no background plate is included."
+  ]
+}
