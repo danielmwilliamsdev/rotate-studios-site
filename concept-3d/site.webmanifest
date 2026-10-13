@@ -7,7 +7,7 @@
   "background_color": "#030604",
   "theme_color": "#030604",
   "icons": [
-    { "src": "/assets/rotate-mark-safe.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" },
+    { "src": "/favicon.png", "sizes": "96x96", "type": "image/png", "purpose": "any" },
     { "src": "/assets/rotate-mark-favicon-180.png", "sizes": "180x180", "type": "image/png" },
     { "src": "/assets/rotate-mark-favicon-512.png", "sizes": "512x512", "type": "image/png" }
   ]
